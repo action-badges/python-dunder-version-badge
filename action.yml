@@ -26,7 +26,7 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: action-badges/python-dunder-version-badge
-        ref: wip
+        ref: main
         path: script-repo
 
     - run: pip install packaging
