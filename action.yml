@@ -27,7 +27,7 @@ runs:
       uses: actions/checkout@v3
       with:
         repository: action-badges/python-dunder-version-badge
-        ref: main
+        ref: wip2
         path: 9pHpeQMXhE  # random string, unlikely to generate a collision
 
     - run: pip install packaging
