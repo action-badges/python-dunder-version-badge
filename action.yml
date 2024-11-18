@@ -18,21 +18,22 @@ runs:
   steps:
     - uses: actions/checkout@v3
 
-    - uses: actions/setup-python@v4
+    - name: Checkout the target repo
+      uses: actions/setup-python@v4
       with:
         python-version: '3.12'
 
-    - name: Checkout the script repository
+    - name: Checkout the action repo
       uses: actions/checkout@v3
       with:
         repository: action-badges/python-dunder-version-badge
         ref: main
-        path: script-repo
+        path: 9pHpeQMXhE  # random string, unlikely to generate a collision
 
     - run: pip install packaging
       shell: bash
 
-    - run: "source <(python script-repo/version_badge.py ${{ inputs.package-dir }})"
+    - run: "source <(python 9pHpeQMXhE/version_badge.py ${{ inputs.package-dir }})"
       shell: bash
 
     - name: Write Badge
